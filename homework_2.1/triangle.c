@@ -8,14 +8,8 @@ int main()
 {
     double side_a, side_b, side_c, P, S;
     
-    printf("Enter side A of the triangle: ");
-    scanf("%lf", &side_a);
-    
-    printf("Enter side B of the triangle: ");
-    scanf("%lf", &side_b);
-    
-    printf("Enter side C of the triangle: ");
-    scanf("%lf", &side_c);
+    printf("Enter the triangle sides: ");
+    scanf("%lf %lf %lf", &side_a, &side_b, &side_c);
     
     if (triangle(side_a, side_b, side_c, &P, &S) == 0) {
         printf("\nPerimeter: %.2lf cm\n", P);
