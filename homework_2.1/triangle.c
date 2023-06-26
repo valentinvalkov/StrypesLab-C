@@ -15,7 +15,7 @@ int main()
         printf("\nPerimeter: %.2lf cm\n", P);
         printf("Area: %.2lf cm^2\n", sqrt(S));
     } else {
-        printf("Invalid triangle input!!!\n");
+        printf("Invalid triangle sides!!!\n");
     }
     
     return 0;
