@@ -9,6 +9,7 @@ int main(){
     size_t n = sizeof(arr) / sizeof(arr[0]);
 
     arrayEvaluate(arr, n, sum);
+
     return 0;
 }
 
@@ -24,5 +25,5 @@ int sum(int* arr, int n){
 void arrayEvaluate(int* arr, size_t n, int(*f)(int*,int)){
     printf("Value is: %d\n", f(arr, n));
 
-    return ; 
+    return; 
 }

@@ -8,7 +8,6 @@
 #define CHECKBIT(mask, bit) (((mask) >> (bit)) & 1)
 #define SWAP(a, b) do { int temp = (a); (a) = (b); (b) = temp; } while(0)
 
-
 void printBinary(unsigned int num);
 
 int main() {
@@ -22,7 +21,7 @@ int main() {
 
     printf("Enter which index/bit you want to set in 1 (between 0 to 7): ");
     scanf("%d", &bit);
-    if(bit > 7){
+    if(bit > 7 || bit < 0){
         fprintf(stderr, "ERROR!!!\n");
     }else{
         SETBIT(mask, bit);
@@ -34,7 +33,7 @@ int main() {
     mask = 255;
     printf("\nEnter which index/bit you want to set in 0 (between 0 to 7): ");
     scanf("%d", &bit);
-    if(bit > 7){
+    if(bit > 7 || bit < 0){
         fprintf(stderr, "ERROR!!!\n");
     }else{
         CLEARBIT(mask, bit);
@@ -54,15 +53,22 @@ int main() {
         
         printf("\nEnter which index/bit you want to inverse (between 0 to 7): ");
         scanf("%d", &bit);
+        if(bit > 7 || bit < 0){
+        fprintf(stderr, "ERROR!!!\n");
+        }else{
         INVERSEBIT(inverseMask, bit);
         printf("Mask after inverting bit %d: %u\n", bit, inverseMask);
         printf("The number in binary after inversion: ");
         printBinary(inverseMask);
-        
+        }
         printf("\nEnter which index/bit you want to check (between 0 to 7): ");
         scanf("%d", &bit);
+        if(bit > 7 || bit < 0){
+        fprintf(stderr, "ERROR!!!\n");
+        }else{
         int checkedBit = CHECKBIT(inverseMask, bit);
         printf("The value of bit %d is: %d\n", bit, checkedBit);
+        }
     }
     
     printf("\nBefore swapping: a = %d, b = %d\n", a, b);
