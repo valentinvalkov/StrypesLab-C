@@ -1,0 +1,13 @@
+Етапите на компилация на един source code са:
+
+1. Pre-processing (filename.c във filename.i)
+ При този етап се премахват на коментарите в нашия код, макросите се заместват и се включват файлове.
+
+2. Compiling (filename.i във filename.s)
+ При този етап изходният код се превръща в код за асемблиране (в зависимост от съответната процесорна архитектура).
+
+3. Assembling (filename.s във filename.o)
+ Асемблерният код се превръща в object file
+
+4. Linking (filename.o + library files във executable file (годен изпълним файл))
+ Това е последният етап, при който се създава executable file, годен за изпълнение.
